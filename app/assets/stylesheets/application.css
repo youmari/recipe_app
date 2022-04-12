@@ -47,3 +47,12 @@ td {
   border-collapse: collapse;
   padding: 2em;
 }
+
+.login-form,
+.sign-up {
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
