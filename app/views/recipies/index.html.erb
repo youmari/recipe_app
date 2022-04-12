@@ -1,2 +1,28 @@
-<h1>Recipies#index</h1>
-<p>Find me in app/views/recipies/index.html.erb</p>
+<p style="color: green"><%= notice %></p>
+
+<h1>Recipies</h1>
+
+<div class="recipies" id="recipies">
+  <%= link_to "New recipy", new_recipy_path, class: "new-recipy" %>
+    <table class="table-auto">
+      <thead>
+        <tr>
+          <th title="Recipy">Recipy</th>
+          <th>Preparation time</th>
+          <th>Cooking time</th>
+          <th>Descriptions</th>
+          <th>Public</th>
+        </tr>
+      </thead>
+      <tbody>
+      <% @recipies.each do |recipy| %>
+        <tr>
+          <td><%= link_to recipy.name, recipy %></td>
+          <td><%= recipy.measurement_unit %></td>
+          <td><%= recipy.price %></td>
+          <td><%= button_to "Delete", recipy, method: :delete %></td>
+        </tr>
+      <% end %>
+      </tbody>
+    </table>
+</div>

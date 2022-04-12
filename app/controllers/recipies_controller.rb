@@ -2,7 +2,7 @@ class RecipiesController < ApplicationController
   before_action :authenticate_user!
   before_action :set_recipy, only: %i[ show edit update destroy ]
   def index
-    @recipy = Recipy.all
+    @recipies = Recipy.all
   end
 
   def show
