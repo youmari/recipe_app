@@ -35,13 +35,14 @@
 .table,
 th,
 td {
-   border: 1px solid;
+  border: 1px solid;
 }
 
 th,
 td {
   padding: 1rem;
 }
+
 .table-auto {
   border-collapse: collapse;
   padding: 2em;
