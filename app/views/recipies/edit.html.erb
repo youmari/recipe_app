@@ -1,2 +1,10 @@
-<h1>Recipies#edit</h1>
-<p>Find me in app/views/recipies/edit.html.erb</p>
+<h1>Editing recipy</h1>
+
+<%= render "form", recipy: @recipy %>
+
+<br>
+
+<div>
+  <%= link_to "Show this recipy", @recipy %> |
+  <%= link_to "Back to recipy", recipies_path %>
+</div>

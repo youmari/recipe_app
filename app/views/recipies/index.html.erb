@@ -10,7 +10,7 @@
           <th title="Recipy">Recipy</th>
           <th>Preparation time</th>
           <th>Cooking time</th>
-          <th>Descriptions</th>
+          <th>Description</th>
           <th>Public</th>
         </tr>
       </thead>
@@ -18,8 +18,9 @@
       <% @recipies.each do |recipy| %>
         <tr>
           <td><%= link_to recipy.name, recipy %></td>
-          <td><%= recipy.measurement_unit %></td>
-          <td><%= recipy.price %></td>
+          <td><%= recipy.preparation_time %></td>
+          <td><%= recipy.cooking_time %></td>
+          <td><%= recipy.description %></td>
           <td><%= button_to "Delete", recipy, method: :delete %></td>
         </tr>
       <% end %>

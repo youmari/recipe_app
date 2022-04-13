@@ -1,2 +1,10 @@
-<h1>Recipies#show</h1>
-<p>Find me in app/views/recipies/show.html.erb</p>
+<p style="color: green"><%= notice %></p>
+
+<%= render @recipy %>
+
+<div>
+  <%= link_to "Edit this recipy", edit_food_path(@recipy) %> |
+  <%= link_to "Back to recipies", recipies_path %>
+
+  <%= button_to "Destroy this recipy", @recipy, method: :delete %>
+</div>

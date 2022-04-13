@@ -1,2 +1,9 @@
-<h1>Recipies#new</h1>
-<p>Find me in app/views/recipies/new.html.erb</p>
+<h1>New food</h1>
+
+<%= render "form", recipy: @recipy %>
+
+<br>
+
+<div>
+  <%= link_to "Back to foods", recipies_path %>
+</div>
