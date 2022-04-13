@@ -65,6 +65,6 @@ class RecipiesController < ApplicationController
 
   # Only allow a list of trusted parameters through.
   def recipy_params
-    params.require(:recipy).permit(:name, :preparation_time, :cooking_time, :description, :public)
+    params.require(:recipy).permit(:name, :preparation_time, :cooking_time, :description)
   end
 end
