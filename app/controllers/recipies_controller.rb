@@ -4,7 +4,8 @@ class RecipiesController < ApplicationController
 
   # GET /recipies or /recipies.json
   def index
-    @recipies = Recipy.all
+    user = current_user
+    @recipies = user.recipies.includes(:user).all
   end
 
   # GET /recipies/1 or /recipies/1.json
