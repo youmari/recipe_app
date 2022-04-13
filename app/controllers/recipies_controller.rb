@@ -1,31 +1,29 @@
 class RecipiesController < ApplicationController
   before_action :authenticate_user!
-  before_action :set_recipy, only: %i[ show edit update destroy ]
+  before_action :set_recipy, only: %i[show edit update destroy]
 
   def index
     @recipies = Recipy.all
   end
 
-  def show
-  end
+  def show; end
 
   def new
     @recipy = Recipy.new
   end
 
-  def edit
-  end
+  def edit; end
 
   def create
     user = current_user
     @recipy = user.recipies.new(recipy_params)
     respond_to do |format|
       if @recipy.save
-        format.html { redirect_to recipy_url(@recipy), notice: "Recipy is successfully created" }
+        format.html { redirect_to recipy_url(@recipy), notice: 'Recipy is successfully created' }
         format.json { render :show, status: :created, location: @recipy }
       else
         format.html { render :new, status: :unprocessable_entity }
-        format.json {render json: @recipy.errors, status: :unprocessable_entity }
+        format.json { render json: @recipy.errors, status: :unprocessable_entity }
       end
     end
   end
