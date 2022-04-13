@@ -16,10 +16,10 @@
       <tbody>
       <% @foods.each do |food| %>
         <tr>
-          <td><%= link_to food.name, food %></td>
+          <td><%= link_to food.name, food ,class: 'fs-4 text-decoration-none text-capitalize text-wrap"'%></td>
           <td><%= food.measurement_unit %></td>
-          <td><%= food.price %></td>
-          <td><%= button_to "Delete", food, method: :delete %></td>
+          <td>$<%= food.price %></td>
+          <td><%= button_to "Delete", food, method: :delete, class: 'btn btn-danger' %></td>
         </tr>
       <% end %>
       </tbody>
