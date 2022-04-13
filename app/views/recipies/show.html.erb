@@ -3,7 +3,7 @@
 <%= render @recipy %>
 
 <div>
-  <%= link_to "Edit this recipy", edit_food_path(@recipy) %> |
+  <%= link_to "Edit this recipy", edit_recipy_path(@recipy) %> |
   <%= link_to "Back to recipies", recipies_path %>
 
   <%= button_to "Destroy this recipy", @recipy, method: :delete %>
