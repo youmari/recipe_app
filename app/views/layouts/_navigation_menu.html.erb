@@ -1,14 +1,13 @@
 <nav class="navbar navbar-light bg-light fixed-top">
   <div class="container-fluid">
       <%= link_to "Recipes", root_path, class: "navbar-brand" %>
-    <div class="">
+    <div>
        <div class="nav-item dropdown d-flex">
              <% if current_user %>
-                <a class="nav-link dropdown-toggle"  id="offcanvasNavbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  <%= current_user.name %>
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <%= current_user.name.capitalize %>
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="offcanvasNavbarDropdown">
-                  <li></li>
                   <li><a class="dropdown-item" >Another action</a></li>
                   <li>
                     <hr class="dropdown-divider">
