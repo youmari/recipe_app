@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'public_recipies/index'
+  get 'public_recipies/show'
   devise_for :users
   resources :foods
   resources :recipies
