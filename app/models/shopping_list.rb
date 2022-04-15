@@ -1,2 +1,0 @@
-class ShoppingList < ApplicationRecord
-end

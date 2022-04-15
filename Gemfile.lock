@@ -71,6 +71,7 @@ GEM
     bootsnap (1.11.1)
       msgpack (~> 1.2)
     builder (3.2.4)
+    cancancan (3.3.0)
     concurrent-ruby (1.1.10)
     crass (1.0.6)
     debug (1.5.0)
@@ -198,6 +199,7 @@ PLATFORMS
 
 DEPENDENCIES
   bootsnap
+  cancancan
   debug
   devise
   importmap-rails
@@ -215,4 +217,4 @@ RUBY VERSION
    ruby 3.0.3p157
 
 BUNDLED WITH
-   2.3.9
+   2.3.5
